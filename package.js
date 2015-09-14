@@ -23,7 +23,7 @@ Package.onUse(function(api) {
 
   // Dependencies of this package
   // Dependencies for server and client
-  api.use(['react']);
+  api.use(['react@0.1.10']);
   api.imply(['react']);
   // Dependencies for client only
   api.use(['cosmos:browserify@0.5.1'], 'client');
