@@ -1,6 +1,6 @@
 Package.describe({
   name: 'pierreeric:logger',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'Isomorphic logger',
   git: 'https://github.com/PEM--/logger',
   documentation: 'README.md'

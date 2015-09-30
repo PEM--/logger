@@ -1,0 +1,16 @@
+babel-compiler@5.8.24_1
+babel-runtime@0.1.4
+base64@1.0.4
+caching-compiler@1.0.0
+check@1.0.6
+coffeescript@1.0.10
+cosmos:browserify@0.7.2
+ecmascript@0.1.5
+ecmascript-collections@0.1.6
+ejson@1.0.7
+es5-shim@4.1.13
+meteor@1.1.9
+pierreeric:logger@0.0.3
+promise@0.5.0
+random@1.0.4
+underscore@1.0.4
