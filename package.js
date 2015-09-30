@@ -1,6 +1,6 @@
 Package.describe({
   name: 'pierreeric:logger',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Isomorphic logger',
   git: 'https://github.com/PEM--/logger',
   documentation: 'README.md'
@@ -8,7 +8,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   // Meteor's API version
-  api.versionsFrom('1.1.0.3');
+  api.versionsFrom('1.2');
 
   // NPM modules
   Npm.depends({
@@ -23,10 +23,14 @@ Package.onUse(function(api) {
 
   // Dependencies of this package
   // Dependencies for server and client
-  api.use(['react@0.1.10']);
-  api.imply(['react']);
+  var shared = [
+    'ecmascript',
+    'es5-shim'
+  ];
+  api.use(shared);
+  api.imply(shared);
   // Dependencies for client only
-  api.use(['cosmos:browserify@0.5.1'], 'client');
+  api.use(['cosmos:browserify@0.7.2'], 'client');
   // Included files in this packages
   // Files for server and client
   api.addFiles('namespace.js');
@@ -35,11 +39,11 @@ Package.onUse(function(api) {
   // Files for server only
   api.addFiles('logger_server.js', 'server');
   // Files for server and client
-  var files = ['logger_both_loglevel_debug.jsx'];
+  var files = ['logger_both_loglevel_debug.js'];
   if (process.env.NODE_ENV === 'production') {
-    files = ['logger_both_loglevel_info.jsx'];
+    files = ['logger_both_loglevel_info.js'];
   }
-  api.addFiles(files.concat(['logger_both.jsx']));
+  api.addFiles(files.concat(['logger_both.js']));
   // Export
   api.export(['Logger']);
 });
